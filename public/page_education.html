@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>page_education</title>
+    <!-- Include Tailwind CSS -->
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <style>
       #background-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
         object-fit: cover;
       }
 
       .content-wrapper {
         position: relative;
         z-index: 1;
+        min-height: 100vh;
       }
 
-      .content {
-        overflow-y: auto; /* Enable vertical scrolling */
+      .footer {
+        position: relative; /* Change from "fixed" to "relative" */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+        z-index: 1000;
+        }
+
+      .footer-icons {
+        font-size: 1.5rem;
+        margin-top: 5px;
       }
     </style>
-    
 </head>
 <body class="text-stone-700 shadow">
-  <video id="background-video" autoplay loop muted>
+  <video id="background-video" autoplay loop muted class="w-full h-full fixed inset-0">
     <source src="https://static.vecteezy.com/system/resources/previews/005/467/620/movement-abstract-dot-geometric-polygonal-structure-on-white-background-in-4k-3d-animation-free-video.webm" type="video/webm">
     Your browser does not support the video tag.
   </video>
 
   <div class="content-wrapper">
-    <header class="bg-stone-50 bg-opacity-100 shadow-lg">
+    <header class="bg-stone-50 bg-opacity-100 shadow-stone-200 shadow-md">
       <div class="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
         <div class="flex justify-between items-center">
           <div>
@@ -43,34 +52,33 @@
           </div>
         </div>
         <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 font-bold">
-          <a class= "hover:text-stone-400" href="index.html">
-            Home
-          </a>
-          <a class="hover:text-stone-400" href="page_skills.html">
-            Skills
-          </a>
-          <a class="hover:text-stone-400" href="https://github.com/Sanderhgtf" target="_blank">
-            Github
-          </a>
-          <a class="hover:text-stone-400" href="page_education.html">
-            Education
-          </a>
-          <a class="hover:text-stone-400" href="page_experience.html">
-            Experience
-          </a>
-          <a class="hover:text-stone-400" href="page_contact.html">
-            Contact
-          </a>
+          <a class= "hover:text-stone-400" href="index.html">Home</a>
+          <a class="hover:text-stone-400" href="page_skills.html">Skills</a>
+          <a class="hover:text-stone-400" href="https://github.com/Sanderhgtf" target="_blank">Github</a>
+          <a class="hover:text-stone-400" href="page_education.html">Education</a>
+          <a class="hover:text-stone-400" href="page_experience.html">Experience</a>
+          <a class="hover:text-stone-400" href="page_contact.html">Contact</a>
         </nav>
       </div>
     </header>
+
+    <!-- This is where shit goes -->
     <main class="container mx-auto px-6 py-8 content">
       
     </main>
-  
-</body>
-</html>
-
   </div>
 
-    
+    <!-- Footer -->
+    <div class="footer bg-stone-500 bg-opacity-90" id="footer">
+      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-0">
+        <p>&copy; Personal portfolio</p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-400">Terms of Service</a>
+          <a href="#" class="hover:text-gray-400">Contact me</a>
+          <a href="#" id="backToTop" class="hover:text-gray-400">Back to Top</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

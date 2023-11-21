@@ -15,13 +15,31 @@
         object-fit: cover;
       }
 
+      .content {
+        overflow-y: auto; /* Enable vertical scrolling */
+      }
+      
       .content-wrapper {
         position: relative;
         z-index: 1;
+        min-height: 100vh;
       }
 
-      .content {
-        overflow-y: auto; /* Enable vertical scrolling */
+      .footer {
+        position: relative; /* Change from "fixed" to "relative" */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+        z-index: 1000;
+        }
+
+
+      .footer-icons {
+        font-size: 1.5rem;
+        margin-top: 5px;
       }
     </style>
     
@@ -33,41 +51,29 @@
   </video>
 
   <div class="content-wrapper">
-    <header class="bg-stone-50 bg-opacity-100 shadow-lg">
-      <div class="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
-        <div class="flex justify-between items-center">
-          <div>
-            <a href="index.html">
-              <h1 class="text-xl font-bold  md:text-2xl uppercase text-stone-800">portfolio website</h1>
-            </a>
+    <header class="bg-stone-50 bg-opacity-100 shadow-stone-200 shadow-md">
+        <div class="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
+          <div class="flex justify-between items-center">
+            <div>
+              <a href="index.html">
+                <h1 class="text-xl font-bold  md:text-2xl uppercase text-stone-800">portfolio website</h1>
+              </a>
+            </div>
           </div>
+          <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 font-bold">
+            <a class= "hover:text-stone-400" href="index.html">Home</a>
+            <a class="hover:text-stone-400" href="page_skills.html">Skills</a>
+            <a class="hover:text-stone-400" href="https://github.com/Sanderhgtf" target="_blank">Github</a>
+            <a class="hover:text-stone-400" href="page_education.html">Education</a>
+            <a class="hover:text-stone-400" href="page_experience.html">Experience</a>
+            <a class="hover:text-stone-400" href="page_contact.html">Contact</a>
+          </nav>
         </div>
-        <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 font-bold">
-          <a class= "hover:text-stone-400" href="index.html">
-            Home
-          </a>
-          <a class="hover:text-stone-400" href="page_skills.html">
-            Skills
-          </a>
-          <a class="hover:text-stone-400" href="https://github.com/Sanderhgtf" target="_blank">
-            Github
-          </a>
-          <a class="hover:text-stone-400" href="page_education.html">
-            Education
-          </a>
-          <a class="hover:text-stone-400" href="page_experience.html">
-            Experience
-          </a>
-          <a class="hover:text-stone-400" href="page_contact.html">
-            Contact
-          </a>
-        </nav>
-      </div>
-    </header>
+      </header>
     <main class="container mx-auto px-6 py-8 content">
       <h2 class="text-4xl font-bold text-center border-b pb-1 text-stone-800">Most recent project</h2>
       <article class="mt-12">
-        <div class="w-full max-w-5xl mx-auto md:grid md:grid-cols-5 md:gap-8 pb-4">
+        <div class="w-full max-w-5xl mx-auto md:grid md:grid-cols-5 md:gap-8 pb-8">
           <div class="md:col-span-3">
             <img
               src="img/curry.png"
@@ -102,6 +108,8 @@
           </div>
         </div>
       </article>
+
+      <!-- Start of the three rows -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         <div>
           <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
@@ -203,11 +211,124 @@
           </article>
         </div>
       </div>
+<!-- End of first row -->
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <div>
+      <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+      <article class="mt-4">
+        <img
+          src="img/guntato.png"
+          width="500"
+          height="200"
+          alt="Project 1"
+          class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+          style="aspect-ratio: 500 / 200; object-fit: cover;"
+        />
+        <h3 class="mt-2 text-lg font-semibold text-stone-800">guntato</h3>
+        <p class="mt-2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+        </p>
+        <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+          Learn More
+          <svg
+            xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            class=" ml-1 font-extralight"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </article>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+      <article class="mt-4">
+        <img
+          src="img/muchiato.png"
+          width="500"
+          height="200"
+          alt="Project 2"
+          class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+          style="aspect-ratio: 500 / 200; object-fit: cover;"
+        />
+        <h3 class="mt-2 text-lg font-semibold text-stone-800">muchiato</h3>
+        <p class="mt-2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+        </p>
+        <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+          Learn More
+          <svg
+            xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            class=" ml-1 font-extralight"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </article>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+      <article class="mt-4">
+        <img
+          src="img/potato.png"
+          width="500"
+          height="200"
+          alt="Project 3"
+          class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+          style="aspect-ratio: 500 / 200; object-fit: cover;"
+        />
+        <h3 class="mt-2 text-lg font-semibold text-stone-800">potato</h3>
+        <p class="mt-2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+        </p>
+        <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+          Learn More
+          <svg
+            xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            class=" ml-1 font-extralight"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </article>
+    </div>
+  </div>
+
     </main>
+  
+    <!-- Footer -->
+  <div class="footer bg-stone-500 bg-opacity-90" id="footer">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-0">
+      <p>&copy; Personal portfolio</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-400">Terms of Service</a>
+        <a href="#" class="hover:text-gray-400">Contact me</a>
+        <a href="#" id="backToTop" class="hover:text-gray-400">Back to Top</a>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>
-
-  </div>
-
-    
