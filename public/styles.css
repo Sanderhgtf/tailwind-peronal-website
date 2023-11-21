@@ -568,6 +568,18 @@ video {
   }
 }
 
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -650,9 +662,13 @@ video {
   border-bottom-width: 1px;
 }
 
-.bg-stone-200 {
+.bg-stone-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(231 229 228 / var(--tw-bg-opacity));
+  background-color: rgb(250 250 249 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-100 {
+  --tw-bg-opacity: 1;
 }
 
 .object-cover {
