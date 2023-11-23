@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
+
+      /* Centers stuff vertically */
+      .centered-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
       #background-video {
         object-fit: cover;
       }
@@ -16,6 +26,7 @@
         position: relative;
         z-index: 1;
         min-height: 100vh;
+        /* min-width: 100vw; */
       }
 
       .footer {
@@ -37,14 +48,28 @@
         .header-hidden {
           transform: translateY(-100%);
           transition: transform 0.3s ease-in-out;
+          top: 1rem;
+          border-color: orange;
+          border-width: 0;
+          border-bottom-width: 2px;
         }
 
         header {
-          transition: transform 0.3s ease;
+          width: 37%;
+          position: fixed;
+          right: 0;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 50;
+          transition: width 0.3s ease, right 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .header-image {
+          height: 5vh; /* Set the max height to 100% of its containing element (the header) */
+          width: auto;
         }
     </style>
 </head>
-<body class="text-stone-700 shadow">
+<body class="text-stone-800 shadow">
 
   <div class="">
 
@@ -55,31 +80,28 @@
       > Your browser does not support the video tag.
     </video> -->
 
-    <header class="bg-stone-50 bg-opacity-100 shadow-stone-400 shadow-md fixed w-full top-0 z-50">
-      <div class="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
-          <div class="flex justify-between items-center">
-              <div>
-                  <a href="index.html">
-                      <h1 class="text-xl font-bold md:text-2xl uppercase text-stone-800">portfolio website</h1>
-                  </a>
-              </div>
-          </div>
-          <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 font-bold">
-              <a class="hover:text-stone-400" href="#introduction">Home</a>
-              <a class="hover:text-stone-400" href="https://github.com/Sanderhgtf" target="_blank">Github</a>
-              <a class="hover:text-stone-400" href="#skills">Skills</a>
-              <a class="hover:text-stone-400" href="#projects">Projects</a>
-              <a class="hover:text-stone-400" href="#education">Education</a>
-              <a class="hover:text-stone-400" href="#contact">Contact</a>
-          </nav>
+    <header class="bg-stone-50 bg-opacity-100 text-xl font-bold rounded-l-2xl shadow-stone-400 shadow-md fixed top-8 z-50">
+      <div class="container mx-auto px-6 py-2 md:flex md:justify-between md:items-center">
+        <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 pr-5">
+          <a class="hover:text-sky-400" href="#introduction">Home</a>
+          <a class="hover:text-sky-400" href="#about">About</a>
+          <a class="hover:text-sky-400" href="#projects">Projects</a>
+          <a class="hover:text-sky-400" href="#skill">Skills</a>
+          <a class="hover:text-sky-400" href="#contact">Contact</a>
+        </nav>
+        <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 pr-10">
+          <a href="https://github.com/Sanderhgtf" target="_blank">
+            <img src="img/icone-github-orange.png" class="header-image"/>
+          </a>
+        </nav>
       </div>
-  </header>
+    </header>
   
 
         <!-- Introduction portion -->
-        <main id="introduction" class="container mx-auto px-6 py-8 content content-wrapper bg-red-700">
+        <main id="introduction" class="container mx-auto px-6 py-8 content content-wrapper bg-stone-200 centered-main">
 
-          <article class="mt-12">
+          <article class="mt-12"> <!-- Center this vertically -->
             <div class="w-full max-w-5xl mx-auto md:grid md:grid-cols-2 md:gap-8 pb-8">
   
               <!-- Left side box -->
@@ -96,7 +118,7 @@
                     <p class="">
                       I'm Naam
                     </p>
-                    <p class="text-red-500">
+                    <p class="text-orange-500">
                       Achternaam 
                     </p>
                   </div>
@@ -105,7 +127,7 @@
                     <p class="">
                       I am into
                     </p>
-                    <p class="text-red-500">
+                    <p class="text-orange-500">
                       web development| 
                     </p>
                   </div>
@@ -133,13 +155,13 @@
         
       </main>
 
-          <!-- Skills portion -->
-    <main id="skills" class="container mx-auto px-6 py-8 content content-wrapper bg-green-700">
+          <!-- About portion -->
+    <main id="about" class="container mx-auto px-6 py-8 content content-wrapper bg-stone-100">
       
     </main>
 
       <!-- Projects portion -->
-      <main id="projects" class="container mx-auto px-6 py-8 content content-wrapper bg-blue-700">
+      <main id="projects" class="container mx-auto px-6 py-8 content content-wrapper bg-stone-200">
         <h2 class="text-4xl font-bold text-center border-b pb-1 text-stone-800">Most recent project</h2>
         <article class="mt-12">
           <div class="w-full max-w-5xl mx-auto md:grid md:grid-cols-5 md:gap-8 pb-8">
@@ -383,16 +405,15 @@
         </article>
       </div>
     </div>
-  
-      </main>
+  </main>
 
-                <!-- Education portion -->
-    <main id="education" class="container mx-auto px-6 py-8 content content-wrapper bg-yellow-400">
+                <!-- Skills portion -->
+    <main id="skills" class="container mx-auto px-6 py-8 content content-wrapper bg-stone-100">
       
     </main>
 
                     <!-- Contact portion -->
-    <main id="contact" class="container mx-auto px-6 py-8 content content-wrapper bg-indigo-500">
+    <main id="contact" class="container mx-auto px-6 py-8 content content-wrapper bg-stone-200">
       
     </main>
 
