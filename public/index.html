@@ -29,104 +29,376 @@
         z-index: 1000;
         }
 
-      .footer-icons {
-        font-size: 1.5rem;
-        margin-top: 5px;
-      }
+        /* responsible for the header appearing/disappearing */
+        .header-no-shadow {
+          box-shadow: none;
+        }
+
+        .header-hidden {
+          transform: translateY(-100%);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        header {
+          transition: transform 0.3s ease;
+        }
     </style>
 </head>
-<body class="text-stone-500 shadow">
-  <video id="background-video" autoplay loop muted class="w-full h-full fixed inset-0">
+<body class="text-stone-700 shadow">
 
-    <!-- <video id="img/background-white-wave.mp4" autoplay loop muted class="w-full h-full fixed inset-0">
-      <source src="img/background-white-wave.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+  <div class="">
+
+    <!-- <video id="background-video" autoplay loop muted class="w-full h-full fixed inset-0">
+      <source src="
+      https://media.istockphoto.com/id/1453306313/nl/video/4k-abstract-technological-background-loopable.mp4?s=mp4-640x640-is&k=20&c=b1tqvaPdIYPelKiUYpZNqiAX9-giZea93tcWBRNws1U=
+      " type="video/webm"
+      > Your browser does not support the video tag.
     </video> -->
-    
 
-    <source src="
-    https://media.istockphoto.com/id/1453306313/nl/video/4k-abstract-technological-background-loopable.mp4?s=mp4-640x640-is&k=20&c=b1tqvaPdIYPelKiUYpZNqiAX9-giZea93tcWBRNws1U=
-    " type="video/webm"
-    > Your browser does not support the video tag.
-  </video>
-
-  <div class="content-wrapper">
-    <header class="bg-stone-50 bg-opacity-100 shadow-stone-200 shadow-md">
+    <header class="bg-stone-50 bg-opacity-100 shadow-stone-400 shadow-md fixed w-full top-0 z-50">
       <div class="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
-        <div class="flex justify-between items-center">
-          <div>
-            <a href="index.html">
-              <h1 class="text-xl font-bold  md:text-2xl uppercase text-stone-800">portfolio website</h1>
-            </a>
+          <div class="flex justify-between items-center">
+              <div>
+                  <a href="index.html">
+                      <h1 class="text-xl font-bold md:text-2xl uppercase text-stone-800">portfolio website</h1>
+                  </a>
+              </div>
           </div>
-        </div>
-        <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 font-bold">
-          <a class= "hover:text-stone-400" href="index.html">Home</a>
-          <a class="hover:text-stone-400" href="page_skills.html">Skills</a>
-          <a class="hover:text-stone-400" href="https://github.com/Sanderhgtf" target="_blank">Github</a>
-          <a class="hover:text-stone-400" href="page_education.html">Education</a>
-          <a class="hover:text-stone-400" href="page_experience.html">Experience</a>
-          <a class="hover:text-stone-400" href="page_contact.html">Contact</a>
-        </nav>
+          <nav class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-6 font-bold">
+              <a class="hover:text-stone-400" href="#introduction">Home</a>
+              <a class="hover:text-stone-400" href="https://github.com/Sanderhgtf" target="_blank">Github</a>
+              <a class="hover:text-stone-400" href="#skills">Skills</a>
+              <a class="hover:text-stone-400" href="#projects">Projects</a>
+              <a class="hover:text-stone-400" href="#education">Education</a>
+              <a class="hover:text-stone-400" href="#contact">Contact</a>
+          </nav>
       </div>
-    </header>
+  </header>
+  
 
-    <!-- This is where shit goes -->
-    <main class="container mx-auto px-6 py-8 content">
-      <article class="mt-12">
-        <div class="w-full max-w-5xl mx-auto md:grid md:grid-cols-2 md:gap-8 pb-8">
+        <!-- Introduction portion -->
+        <main id="introduction" class="container mx-auto px-6 py-8 content content-wrapper bg-red-700">
 
-          <!-- Left side box -->
-          <div class="font-bold md:col-span-1">
-            <div class="flex flex-col">
-
-              <div class="flex md:flex-row space-x-1 mt-0 text-4xl">
-                <p class="mt-12">
-                  Hi there,
-                </p>
+          <article class="mt-12">
+            <div class="w-full max-w-5xl mx-auto md:grid md:grid-cols-2 md:gap-8 pb-8">
+  
+              <!-- Left side box -->
+              <div class="font-bold md:col-span-1">
+                <div class="flex flex-col">
+  
+                  <div class="flex md:flex-row space-x-1 mt-0 text-4xl">
+                    <p class="mt-12">
+                      Hi there,
+                    </p>
+                  </div>
+  
+                  <div class="flex md:flex-row space-x-1 mt-4 text-4xl">
+                    <p class="">
+                      I'm Naam
+                    </p>
+                    <p class="text-red-500">
+                      Achternaam 
+                    </p>
+                  </div>
+  
+                  <div class="flex md:flex-row space-x-1 mt-4 text-2xl">
+                    <p class="">
+                      I am into
+                    </p>
+                    <p class="text-red-500">
+                      web development| 
+                    </p>
+                  </div>
+  
+                  <!-- Icons -->
+                  <div class="flex md:flex-row space-x-1">
+                    <img src="img/TailwindCSS.png"/>
+                    <img src="img/TailwindCSS.png"/>
+                    <img src="img/TailwindCSS.png"/>
+                    <img src="img/TailwindCSS.png"/>
+                  </div>
+  
+                </div>
               </div>
-
-              <div class="flex md:flex-row space-x-1 mt-4 text-4xl">
-                <p class="">
-                  I'm Naam
-                </p>
-                <p class="text-red-500">
-                  Achternaam 
-                </p>
+  
+              <!-- Right side box -->
+              <div class="mt-4 md:mt-0 md:col-span-1">
+                <img src="img/avataaars-circle.png"
+                  width= 85%
+                  height= auto
+                  min-width = 55%>
               </div>
-
-              <div class="flex md:flex-row space-x-1 mt-4 text-2xl">
-                <p class="">
-                  I am into
-                </p>
-                <p class="text-red-500">
-                  web development| 
-                </p>
-              </div>
-
-              <!-- Icons -->
-              <div class="flex md:flex-row space-x-1">
-                <img src="img/TailwindCSS.png"/>
-                <img src="img/TailwindCSS.png"/>
-                <img src="img/TailwindCSS.png"/>
-                <img src="img/TailwindCSS.png"/>
-              </div>
-
             </div>
-          </div>
+          </article>
+        
+      </main>
 
-          <!-- Right side box -->
-          <div class="mt-4 md:mt-0 md:col-span-1">
-            <img src="img/avataaars-circle.png"
-              width= 85%
-              height= auto
-              min-width = 55%>
-          </div>
-        </div>
-      </article>
+          <!-- Skills portion -->
+    <main id="skills" class="container mx-auto px-6 py-8 content content-wrapper bg-green-700">
       
     </main>
+
+      <!-- Projects portion -->
+      <main id="projects" class="container mx-auto px-6 py-8 content content-wrapper bg-blue-700">
+        <h2 class="text-4xl font-bold text-center border-b pb-1 text-stone-800">Most recent project</h2>
+        <article class="mt-12">
+          <div class="w-full max-w-5xl mx-auto md:grid md:grid-cols-5 md:gap-8 pb-8">
+            <div class="md:col-span-3">
+              <img
+                src="img/curry.png"
+                width="1000"
+                height="500"
+                alt="Most recent project"
+                class="rounded-lg w-full h-64 object-cover object-center shadow-lg"
+                style="aspect-ratio: 1000 / 500; object-fit: cover;"
+              />
+            </div>
+            <div class="mt-4 md:mt-0 md:col-span-2 border-y">
+              <h3 class="text-2xl font-semibold text-stone-800">Lodestone network plugin</h3>
+              <p class="mt-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+              </p>
+              <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+                Learn More
+                <svg
+                  xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  class=" ml-1 font-extralight"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Start of the three rows -->
+        <div id="section2" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          <div>
+            <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+            <article class="mt-4">
+              <img
+                src="img/guntato.png"
+                width="500"
+                height="200"
+                alt="Project 1"
+                class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+                style="aspect-ratio: 500 / 200; object-fit: cover;"
+              />
+              <h3 class="mt-2 text-lg font-semibold text-stone-800">guntato</h3>
+              <p class="mt-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+              </p>
+              <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+                Learn More
+                <svg
+                  xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  class=" ml-1 font-extralight"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </article>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+            <article class="mt-4">
+              <img
+                src="img/muchiato.png"
+                width="500"
+                height="200"
+                alt="Project 2"
+                class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+                style="aspect-ratio: 500 / 200; object-fit: cover;"
+              />
+              <h3 class="mt-2 text-lg font-semibold text-stone-800">muchiato</h3>
+              <p class="mt-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+              </p>
+              <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+                Learn More
+                <svg
+                  xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  class=" ml-1 font-extralight"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </article>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+            <article class="mt-4">
+              <img
+                src="img/potato.png"
+                width="500"
+                height="200"
+                alt="Project 3"
+                class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+                style="aspect-ratio: 500 / 200; object-fit: cover;"
+              />
+              <h3 class="mt-2 text-lg font-semibold text-stone-800">potato</h3>
+              <p class="mt-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+              </p>
+              <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+                Learn More
+                <svg
+                  xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  class=" ml-1 font-extralight"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+  <!-- End of second row -->
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div>
+        <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+        <article class="mt-4">
+          <img
+            src="img/guntato.png"
+            width="500"
+            height="200"
+            alt="Project 1"
+            class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+            style="aspect-ratio: 500 / 200; object-fit: cover;"
+          />
+          <h3 class="mt-2 text-lg font-semibold text-stone-800">guntato</h3>
+          <p class="mt-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+          </p>
+          <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+            Learn More
+            <svg
+              xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              class=" ml-1 font-extralight"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </article>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+        <article class="mt-4">
+          <img
+            src="img/muchiato.png"
+            width="500"
+            height="200"
+            alt="Project 2"
+            class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+            style="aspect-ratio: 500 / 200; object-fit: cover;"
+          />
+          <h3 class="mt-2 text-lg font-semibold text-stone-800">muchiato</h3>
+          <p class="mt-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+          </p>
+          <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+            Learn More
+            <svg
+              xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              class=" ml-1 font-extralight"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </article>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-stone-800 border-b"></h3>
+        <article class="mt-4">
+          <img
+            src="img/potato.png"
+            width="500"
+            height="200"
+            alt="Project 3"
+            class="rounded-lg w-full h-64 object-cover object-center shadow-md"
+            style="aspect-ratio: 500 / 200; object-fit: cover;"
+          />
+          <h3 class="mt-2 text-lg font-semibold text-stone-800">potato</h3>
+          <p class="mt-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora reiciendis qui magni dolorem!
+          </p>
+          <a class="text-blue-500 inline-flex items-center mt-4 hover:ml-2 font-extralight" href="https://github.com/Sanderhgtf/test123-lodestone-plugin" target="_blank">
+            Learn More
+            <svg
+              xmlns="https://github.com/Sanderhgtf/test123-lodestone-plugin"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              class=" ml-1 font-extralight"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  
+      </main>
+
+                <!-- Education portion -->
+    <main id="education" class="container mx-auto px-6 py-8 content content-wrapper bg-yellow-400">
+      
+    </main>
+
+                    <!-- Contact portion -->
+    <main id="contact" class="container mx-auto px-6 py-8 content content-wrapper bg-indigo-500">
+      
+    </main>
+
+    </div>
   </div>
+
 
     <!-- Footer -->
     <div class="footer bg-stone-500 bg-opacity-90" id="footer">
